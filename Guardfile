@@ -69,7 +69,7 @@ guard :rspec, cmd: "bundle exec rspec" do
   end
 end
 
-guard 'rspec', all_after_pass: false, cli: '--drb' do
+guard 'rspec', all_after_pass: false, cmd: "bundle exec rspec", cli: '--drb' do
   require 'active_support/inflector'
 # Custom Rails Tutorial specs
       watch(%r{^app/controllers/(.+)_(controller)\.rb$}) do |m|
